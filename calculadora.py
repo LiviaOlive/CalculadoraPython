@@ -1,3 +1,5 @@
+import funcoes
+
 print("====Calculadora====")
 
 resultado = float(input("Digite o primeiro número: "))
@@ -16,16 +18,16 @@ while True:
     numero = float(input("Digite o próximo número: "))
 
     if operador == '+':
-        resultado += numero
+        resultado = funcoes.somar(resultado, numero)
     elif operador == '-':
-        resultado -= numero
+        resultado = funcoes.subtrair(resultado, numero)
     elif operador == '*':
-        resultado *= numero
+        resultado = funcoes.multiplicar(resultado, numero)
     elif operador == '/':
-        if numero != '0':
-            resultado /= numero
-        else:
-            print("Erro: Divisão por zero não é permitida.")
+        try:
+            resultado = funcoes.dividir(resultado, numero)
+        except ValueError as erro:
+            print(erro)
             continue
     else:
         print("Operador inválido. Tente novamente.")
