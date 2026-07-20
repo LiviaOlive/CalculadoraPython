@@ -1,4 +1,4 @@
-import funcoes
+import CalculadoraPython.calculadora.funcoes as funcoes
 
 print("====Calculadora====")
 

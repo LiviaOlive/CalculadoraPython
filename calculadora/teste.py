@@ -1,4 +1,4 @@
-import funcoes
+import CalculadoraPython.calculadora.funcoes as funcoes
 print(funcoes.somar(5, 3))
 print(funcoes.subtrair(10, 4))
 print(funcoes.multiplicar(2, 6))
